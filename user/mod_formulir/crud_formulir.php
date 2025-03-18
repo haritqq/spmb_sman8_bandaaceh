@@ -85,7 +85,8 @@ if ($pg == 'simpanalamat') {
         'koordinat'         => $_POST['koordinat'],
         'jarak'             => $_POST['jarak'],
         'waktu'             => $_POST['waktu'],
-        'transportasi'      => $_POST['transportasi']
+        'transportasi'      => $_POST['transportasi'],
+        'tinggal'           => $_POST{'tinggal'}
 
     ];
 
