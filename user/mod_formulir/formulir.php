@@ -108,6 +108,13 @@
                     <div class="tab-content" id="myTabContent2">
                         <div class="tab-pane fade show active" id="home3" role="tabpanel" aria-labelledby="home-tab3">
                             <form id="form-datadiri">
+
+                    <!-- Progress Bar -->
+                    <div style="width: 100%; background-color: #e0e0e0; border-radius: 10px; margin-bottom: 20px; position: relative; height: 20px;">
+                    <div id="progress-bar-inner" style="height: 100%; width: 0%; background-color: red; border-radius: 10px; transition: width 0.5s, background-color 0.5s;"></div>
+                    <div id="progress-text" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); font-weight: bold; color: #fff;">0%</div>
+                    </div>
+
 								<div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Pendaftaran</label>
                                     <div class="col-sm-12 col-md-7">
@@ -118,20 +125,20 @@
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Asal Sekolah</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="text" name="asal_sekolah" class="form-control" 
-											   value="<?= $siswa['asal_sekolah'] ?>" required>
+											   value="<?= $siswa['asal_sekolah'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">NPSN Sekolah Asal</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="text" name="npsn_asal" class="form-control" 
-											   value="<?= $siswa['npsn_asal'] ?>" required>
+											   value="<?= $siswa['npsn_asal'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Pilihan Program/Jurusan</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <select class='form-control' name='jurusan' required>
+                                        <select class='form-control' name='jurusan' required oninput="updateProgress()">
                                             <option value="<?= $siswa['jurusan'] ?>"><?= $siswa['jurusan'] ?></option>
 													<?php $qu = mysqli_query($koneksi, "select * from jurusan ");
 													while ($jur = mysqli_fetch_array($qu)) {
@@ -145,19 +152,19 @@
 								<div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">NISN</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="number" name="nisn" class="form-control" value="<?= $siswa['nisn'] ?>" required>
+                                        <input type="number" name="nisn" class="form-control" value="<?= $siswa['nisn'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">NIK</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="number" name="nik" class="form-control" value="<?= $siswa['nik'] ?>" required>
+                                        <input type="number" name="nik" class="form-control" value="<?= $siswa['nik'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kewarganegaraan</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <select class='form-control' name='warga_siswa' required>
+                                        <select class='form-control' name='warga_siswa' required oninput="updateProgress()">
                                             <option value=''>Pilih Kewarganegaraan</option>";
                                             <?php foreach ($warga_siswa as $val => $key) { ?>
                                                 <?php if ($siswa['warga_siswa'] == $val) { ?>
@@ -173,26 +180,26 @@
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Lengkap</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="nama" class="form-control" value="<?= $siswa['nama'] ?>" required>
+                                        <input type="text" name="nama" class="form-control" value="<?= $siswa['nama'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tempat</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tempat Lahir</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="tempat" class="form-control" value="<?= $siswa['tempat_lahir'] ?>" required>
+                                        <input type="text" name="tempat" class="form-control" value="<?= $siswa['tempat_lahir'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tgl Lahir</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Lahir</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="text" name="tgllahir" class="form-control datepicker" 
-											   value="<?= $siswa['tgl_lahir'] ?>" required>
+											   value="<?= $siswa['tgl_lahir'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis Kelamin</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <select class='form-control' name='jenkel' required>
+                                        <select class='form-control' name='jenkel' required oninput="updateProgress()">
                                             <option value=''>Pilih Jenis Kelamin</option>";
                                             <?php foreach ($jeniskelamin as $val => $key) { ?>
                                                 <?php if ($siswa['jenkel'] == $val) { ?>
@@ -207,19 +214,19 @@
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Anak Ke</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="anakke" class="form-control" value="<?= $siswa['anak_ke'] ?>" required>
+                                        <input type="text" name="anakke" class="form-control" value="<?= $siswa['anak_ke'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jumlah Saudara</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="saudara" class="form-control" value="<?= $siswa['saudara'] ?>" required>
+                                        <input type="text" name="saudara" class="form-control" value="<?= $siswa['saudara'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Agama</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <select class='form-control' name='agama' required>
+                                        <select class='form-control' name='agama' required oninput="updateProgress()">
                                             <option value=''>Pilih Agama</option>";
                                             <?php foreach ($agama as $val) { ?>
                                                 <?php if ($siswa['agama'] == $val) { ?>
@@ -234,7 +241,7 @@
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Cita Cita</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <select class='form-control' name='citacita' required>
+                                        <select class='form-control' name='citacita' required oninput="updateProgress()">
                                             <option value=''>Pilih Cita-cita</option>";
                                             <?php foreach ($cita as $val) { ?>
                                                 <?php if ($siswa['citacita'] == $val) { ?>
@@ -250,7 +257,7 @@
                                  <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Hobi</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <select class='form-control' name='hobi' required>
+                                        <select class='form-control' name='hobi' required oninput="updateProgress()">
                                             <option value=''>Pilih Hobi</option>";
                                             <?php foreach ($hobi as $val) { ?>
                                                 <?php if ($siswa['hobi'] == $val) { ?>
@@ -266,7 +273,7 @@
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Email</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="email" class="form-control" value="<?= $siswa['email'] ?>" required>
+                                        <input type="text" name="email" class="form-control" value="<?= $siswa['email'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
@@ -279,7 +286,7 @@
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Yang Membiayai Sekolah</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <select class='form-control' name='biaya_sekolah' required>
+                                        <select class='form-control' name='biaya_sekolah' required oninput="updateProgress()">
                                             <option value=''>Yang Membiayai Sekolah</option>";
                                             <?php foreach ($biaya_sekolah as $val) { ?>
                                                 <?php if ($siswa['biaya_sekolah'] == $val) { ?>
@@ -292,7 +299,7 @@
                                     </div>
                                 </div>
 
-                                 <div class="form-group row mb-2">
+                                 <!-- <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Pernah PAUD</label>
                                     <div class="col-sm-12 col-md-7">
                                         <select class='form-control' name='paud' >
@@ -418,26 +425,26 @@
                                             <?php } ?>
                                         </select>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No KIP</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="kip" class="form-control" value="<?= $siswa['no_kip'] ?>" placeholder="kosongkan jika tidak punya KIP">
+                                        <input type="text" name="kip" class="form-control" value="<?= $siswa['no_kip'] ?>" placeholder="kosongkan jika tidak punya KIP" required oninput="updateProgress()">
                                     </div>
                                 </div>
 
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No KK</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="number" name="nokk" class="form-control" value="<?= $siswa['no_kk'] ?>" required>
+                                        <input type="number" name="nokk" class="form-control" value="<?= $siswa['no_kk'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Kepala Keluarga</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="text" name="kepala_keluarga" class="form-control" 
-											   value="<?= $siswa['kepala_keluarga'] ?>" required>
+											   value="<?= $siswa['kepala_keluarga'] ?>" required oninput="updateProgress()">
                                     </div>
                                 </div>
                                 
@@ -890,6 +897,59 @@
 		
 </div>
 <?php } ?>
+
+<script>
+    // Memuat progres dari LocalStorage jika ada
+    window.onload = function() {
+        const savedProgress = localStorage.getItem('progress');
+        if (savedProgress) {
+            const progress = parseInt(savedProgress);
+            updateProgressBar(progress);
+        }
+    }
+
+    // Fungsi untuk memperbarui progres bar dan menyimpan progres di LocalStorage
+    function updateProgress() {
+        const form = document.getElementById('form-datadiri');   
+        const totalFields = form.elements.length - 1; // Exclude submit button
+        let filledFields = 0;
+
+        // Hitung jumlah field yang terisi
+        for (let i = 0; i < totalFields; i++) {
+            const field = form.elements[i];
+            if (field.value.trim() !== "" || (field.type === "select-one" && field.value !== "")) {
+                filledFields++;
+            }
+        }
+
+        // Hitung persentase progres
+        const progress = (filledFields / totalFields) * 100;
+
+        // Update progres bar dan teks persentase
+        updateProgressBar(progress);
+
+        // Simpan progres ke LocalStorage
+        localStorage.setItem('progress', progress);
+    }
+
+    // Fungsi untuk memperbarui progres bar berdasarkan persentase
+    function updateProgressBar(progress) {
+        const progressBar = document.getElementById('progress-bar-inner');
+        const progressText = document.getElementById('progress-text');
+        progressBar.style.width = progress + '%';
+        progressText.textContent = Math.round(progress) + '%';
+
+        // Ubah warna berdasarkan progres
+        if (progress < 50) {
+            progressBar.style.backgroundColor = 'red'; // Merah jika kurang dari 50%
+        } else if (progress < 80) {
+            progressBar.style.backgroundColor = 'orange'; // Oranye jika antara 50% dan 80%
+        } else {
+            progressBar.style.backgroundColor = 'green'; // Hijau jika lebih dari 80%
+        }
+    }
+</script>
+
 <script>
      $('.custom-file-input').on('change', function() {
         let fileName = $(this).val().split('\\').pop();

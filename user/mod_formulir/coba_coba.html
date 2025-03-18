@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Diri Siswa</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+
+<div style="width: 60%; margin: 50px auto; background-color: #fff; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+    <h2>Form Data Diri Siswa</h2>
+
+    <!-- Progress Bar -->
+    <div style="width: 100%; background-color: #e0e0e0; border-radius: 10px; margin-bottom: 20px; position: relative; height: 20px;">
+        <div id="progress-bar-inner" style="height: 100%; width: 0%; background-color: red; border-radius: 10px; transition: width 0.5s, background-color 0.5s;"></div>
+        <div id="progress-text" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); font-weight: bold; color: #fff;">0%</div>
+    </div>
+
+    <form id="dataDiriForm">
+        <div style="margin-bottom: 15px;">
+            <label for="nama" style="display: block; font-weight: bold; margin-bottom: 5px;">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;" oninput="updateProgress()">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="nisn" style="display: block; font-weight: bold; margin-bottom: 5px;">NISN</label>
+            <input type="text" id="nisn" name="nisn" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;" oninput="updateProgress()">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="tanggal_lahir" style="display: block; font-weight: bold; margin-bottom: 5px;">Tanggal Lahir</label>
+            <input type="date" id="tanggal_lahir" name="tanggal_lahir" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;" oninput="updateProgress()">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="email" style="display: block; font-weight: bold; margin-bottom: 5px;">Email</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;" oninput="updateProgress()">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="jurusan" style="display: block; font-weight: bold; margin-bottom: 5px;">Jurusan</label>
+            <select id="jurusan" name="jurusan" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;" onchange="updateProgress()">
+                <option value="">Pilih Jurusan</option>
+                <option value="IPA">IPA</option>
+                <option value="IPS">IPS</option>
+                <option value="Bahasa">Bahasa</option>
+            </select>
+        </div>
+        <button type="submit" style="background-color: #4caf50; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Kirim Data</button>
+    </form>
+</div>
+
+<script>
+    function updateProgress() {
+        const form = document.getElementById('dataDiriForm');
+        const totalFields = form.elements.length - 1; // Exclude submit button
+        let filledFields = 0;
+
+        // Count the filled fields
+        for (let i = 0; i < totalFields; i++) {
+            const field = form.elements[i];
+            if (field.value.trim() !== "" || (field.type === "select-one" && field.value !== "")) {
+                filledFields++;
+            }
+        }
+
+        // Calculate progress percentage
+        const progress = (filledFields / totalFields) * 100;
+
+        // Update progress bar width and percentage text
+        const progressBar = document.getElementById('progress-bar-inner');
+        const progressText = document.getElementById('progress-text');
+        progressBar.style.width = progress + '%';
+        progressText.textContent = Math.round(progress) + '%';
+
+        // Change color based on progress
+        if (progress < 50) {
+            progressBar.style.backgroundColor = 'red'; // Red if less than 50%
+        } else if (progress < 80) {
+            progressBar.style.backgroundColor = 'orange'; // Orange if between 50% and 80%
+        } else {
+            progressBar.style.backgroundColor = 'green'; // Green if above 80%
+        }
+    }
+</script>
+
+</body>
+</html>
