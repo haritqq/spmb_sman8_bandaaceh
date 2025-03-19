@@ -7,7 +7,7 @@
          <title>SPMB ONLINE | <?= $setting['nama_sekolah'] ?></title>
 		 <!-- META DISKRIPSI-->
 		<meta name="description" content="Mari bergabung Bersama Kami di <?= $setting['nama_sekolah'] ?>, Pendaftaran Peserta didik Baru Tahun <?= date('Y') ?> Kembali dibuka ">
-		<meta name="keywords" content="simasapp v.1.1,simas madrasah, simas sekolah, web simas,"/>
+
 
         <!-- Vendor -->
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
@@ -19,14 +19,14 @@
         <link rel="shortcut icon" href="<?= $setting['logo'] ?>" />
 		
 		 <link rel="stylesheet" href="assets/css/1.css">
-		 <link rel="stylesheet" href="assets/css/2.css">
-		 <link rel="stylesheet" href="assets/css/3.css">
+		 <!-- <link rel="stylesheet" href="assets/css/2.css"> -->
+		 <!-- <link rel="stylesheet" href="assets/css/3.css"> -->
         
-		 <link rel="stylesheet" href="assets/css/components2.css">
+		 <!-- <link rel="stylesheet" href="assets/css/components2.css"> -->
 		
 		
 		
-      <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
 	<!--WAKTU JALAN-->
 	<link rel="stylesheet" type="text/css" href="assets/front/vendor/animate/animate.css">
@@ -81,8 +81,8 @@
                                 </li>
                                 <!-- <li class="nav-item">
                                     <a class="nav-link" href="#statistik" id="link-statistik">Statistik</a>
-                                </li> -->
-                                <!--<li class="nav-item">
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="#persyaratan" id="link-persyaratan">Info Pendaftaran</a>
                                 </li> -->
 								
@@ -106,8 +106,8 @@
                             <div id="carousel" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                                    <!--<li data-target="#carousel" data-slide-to="1"></li>
-                                    <li data-target="#carousel" data-slide-to="2"></li> -->
+                                    <li data-target="#carousel" data-slide-to="1"></li>
+                                    <li data-target="#carousel" data-slide-to="2"></li>
                                    
                                     
                                 </ol>
@@ -118,22 +118,20 @@
                                                 Selamat Datang Di web SPMB Online
                                             </h5>
                                             <br />
+                                            <p data-animation="animated slideInRight" data-delay="0.5s">
+                                                Sistem Penerimaan Murid Baru Tahun Pelajaran 2025/2026 <?= $setting['nama_sekolah'] ?>.
+                                            </p>
                                             <p data-animation="animated slideInRight" data-delay="1s">
-                                                Aplikasi Penerimaan Peserta didik baru Tahun Pelajaran 2025/2026 <?= $setting['nama_sekolah'] ?>.
+                                                Pendaftaran Siswa dan Siswi Baru Tahun 2025 ini telah dibuka. Silahkan Segera Daftar dan lengkapi Formulir
                                             </p>
-                                            <p data-animation="animated slideInRight" data-delay="2s">
-                                                Pendaftaran Siswa dan Siswi Baru Tahun 2025 Prestasi Sudah Ditutup.
-                                            </p>
-                                            <p data-animation="animated flipInX" data-delay="3s">
-                                                <a href="" class="btn btn-warning nav-link" style="color: black;">
-                                                    Pendaftaran Sudah Ditutup
-                                                    <!-- <span class="fa fa-chevron-down"></span> -->
+                                            <p data-animation="animated flipInX" data-delay="1.5s">
+                                                <a href="/#tentang" class="btn btn-warning nav-link">
+                                                    Lihat Alur Pendaftaran
+                                                    <span class="fa fa-chevron-down"></span>
                                                 </a>
                                             </p>
                                         </div>
                                     </div>
-                                    <!--
-									</div>
                                     <div class="carousel-item">
                                         <div>
                                             <h5 data-animation="animated fadeInDownBig">
@@ -187,7 +185,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div> -->
+                                    </div>
                                    
                                     
                                     
@@ -234,15 +232,15 @@
                         
                         <div class="row">
 							
-							<!--<div class="col-sm-6">
+							<div class="col-sm-6">
 							
                                <p align="center">
                                     <img src="assets/Alur Pendaftaran PPDB.png" align="center" width="600" style="max-width: 100%" />
                                 </p>
 										
-                            </div> -->
+                            </div>
                             
-                            <!--<div class="col-sm-6 d-flex align-items-center">
+                            <div class="col-sm-6 d-flex align-items-center">
 							<div class="col-md-12 animated bounceInLeft">
 								<?php if ($setting['jenjang'] == 1) { ?>
 								<div class="card">
@@ -349,8 +347,7 @@
 													<label for="jenis">JENIS PENDAFTARAN</label>
 													<select class="form-control" name="jenis" id="jenis">
 													<option value="1">SISWA BARU</option>
-													<!-- jadikan 1 baris di bawah komen
-													<option value="2">REGULER</option>
+													<!-- <option value="2">REGULER</option> -->
 												</select>
 												</div>
 												<div class="form-group col-md-6">
@@ -406,7 +403,7 @@
 								</div>
 								<?php } ?>
 							</div>
-                            </div> -->
+                            </div>
 							
                         </div>
                     </div>
@@ -433,46 +430,17 @@
                                                 Aplikasi Penerimaan Peserta didik baru Tahun Pelajaran 2025/2026 <?= $setting['nama_sekolah'] ?>.
                                             </p>
                                             <p data-animation="animated slideInRight" data-delay="2s">
-                                                Pendaftaran Siswa dan Siswi Baru Tahun 2025 Prestasi Sudah Ditutup.
+                                                Pendaftaran Siswa dan Siswi Baru Tahun 2025 ini Belum Dibuka.
                                             </p>
                                             <p data-animation="animated flipInX" data-delay="3s">
-                                                <a href="" class="btn btn-warning nav-link" style="color: black;">
-                                                    Pendaftaran Sudah Ditutup
-                                                    <!-- <span class="fa fa-chevron-down"></span> -->
+                                                <a href="" class="btn btn-success nav-link">
+                                                    Pendaftaran Dibuka Dalam
+                                                    <span class="fa fa-chevron-down"></span>
                                                 </a>
                                             </p>
                                         </div>
                                     </div>
-							<!-- <center><div class="cd100"></div></center> -->
-
-                                <!-- <p data-animation="animated flipInX" data-delay="3s">
-                                                <a href="" class="btn btn-light nav-link" style="color: black;">
-                                                <strong>📢 KEPADA CALON SISWA DAN ORANG TUA/WALI</strong>
-                                                <br><br>
-                                                Hasil Seleksi Penerimaan Peserta Didik Baru (SPMB) SMA Negeri 8 Banda Aceh 
-                                                <br>akan diumumkan hari ini melalui laman resmi:
-                                                <br>🔗 spmb.sma8bna.sch.id
-                                                <br>✅ Harap selalu memantau laman tersebut untuk mendapatkan informasi terbaru.
-                                                    <!-- Pengumuman hasil SPMB Prestasi akan diumumkan Hari ini, Harap  -->
-                                                    <!-- <span class="fa fa-chevron-down"></span> -->
-                                                </a>
-                            </p> -->
-
-                            <div class="jumbotron">
-                                <center><h4>📢 KEPADA CALON SISWA DAN ORANG TUA/WALI</h4></center>
-                                <br><center><h5>Hasil Seleksi Penerimaan Peserta Didik Baru (SPMB) SMA Negeri 8 Banda Aceh</h5>
-                                <center><h5>Akan diumumkan hari ini melalui laman resmi:</h5></center>    
-                                <br>
-                                    <p class="lead">
-                                        <a class="btn btn-primary btn-lg" href="https://sma8bna.sch.id/pengumuman-spmb/" role="button"> 🔗 sma8bna.sch.id/pengumuman-spmb</a>
-                                    </p>
-                                    <h5>✅ Harap selalu memantau laman tersebut untuk mendapatkan informasi terbaru.</h5>
-                                    <h5>✅ Gunakan 3 digit terakhir nomor pendaftaran Anda untuk mencocokkan hasil seleksi.</h5>
-                                    <h5>📌 Jika ada kendala dalam pengecekan, silakan hubungi panitia SPMB.</h5>
-                                    <h5>Terima kasih. 🙏</h5>
-                                    <h5>Panitia SPMB SMA Negeri 8 Banda Aceh</h5>
-                                </center>
-</div>
+							<center><div class="cd100"></div></center>
 						
                         </div>
                         <div class="col-sm-4">
@@ -510,7 +478,7 @@
             </div>
             <div class="home-content">
                 <section id="tentang">
-                    <!-- <div class="container">
+                    <div class="container">
                         
                         <div class="row">
                             
@@ -588,7 +556,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </section>
 				
 				<?php } ?>

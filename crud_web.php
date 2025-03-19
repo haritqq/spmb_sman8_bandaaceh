@@ -20,7 +20,7 @@ if ($pg == 'simpan') {
         $kodedaftar = $data['maxKode'];
         $noUrut = (int) substr($kodedaftar, 8, 3);
         $noUrut++;
-        $char = "PPDB" . date('Y');
+        $char = "SPMB" . date('Y');
         $newID = $char . sprintf("%03s", $noUrut);
         $nama = mysqli_escape_string($koneksi, ucwords(strtolower($_POST['nama'])));
         $data = [
@@ -50,7 +50,7 @@ if ($pg == 'simpan') {
             echo json_encode($pesan);
         } else {
             $pesan = [
-                'pesan' => 'Nisn sudah terdaftar'
+                'pesan' => 'NISN sudah terdaftar silahkan hubungi Operator'
             ];
             echo json_encode($pesan);
         }
@@ -72,7 +72,7 @@ if ($pg == 'simpan2') {
         $kodedaftar = $data['maxKode'];
         $noUrut = (int) substr($kodedaftar, 8, 3);
         $noUrut++;
-        $char = "PPDB" . date('Y');
+        $char = "SPMB" . date('Y');
         $newID = $char . sprintf("%03s", $noUrut);
         $nama = mysqli_escape_string($koneksi, ucwords(strtolower($_POST['nama'])));
         $data = [
@@ -101,7 +101,7 @@ if ($pg == 'simpan2') {
             echo json_encode($pesan);
         } else {
             $pesan = [
-                'pesan' => 'Nisn sudah terdaftar'
+                'pesan' => 'NISN sudah terdaftar silahkan hubungi Operator'
             ];
             echo json_encode($pesan);
         }

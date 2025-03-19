@@ -91,7 +91,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class='judul'>&copy; <!-- <a href="ppdb.online" class="txt2 hov1"> -->
-					<b>PPDB ONLINE</b>
+					<b>SPMB ONLINE</b>
 				</a>
 			</div>
 			<div class='logo hidden-xs'><img src="../<?= $setting['logo'] ?>" height="75" /></div>
@@ -103,7 +103,7 @@
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
 				<form id="form-login">
 					<span class="animated flipInX login100-form-title">
-						APLIKASI PPDB ONLINE					</span>
+						APLIKASI SPMB ONLINE					</span>
 					<span class="animated flipInX login100-form-title">
 						<!-- <?= $setting['nama_sekolah'] ?> -->
 						SMAN 8 BANDA ACEH

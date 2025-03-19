@@ -21,7 +21,7 @@
         </li>
     
     <li class="dropdown ">
-        <a href="#" class="nav-link has-dropdown"><i class="fas fa-user-friends"></i> <span>Data PPDB</span></a>
+        <a href="#" class="nav-link has-dropdown"><i class="fas fa-user-friends"></i> <span>Data SPMB</span></a>
         <ul class="dropdown-menu">
             <li><a class="nav-link" href="?pg=daftar">Semua Data</a></li>
 			<li><a class="nav-link" href="?pg=berkas_ppdb">Daftar Berkas</a></li>
@@ -36,7 +36,7 @@
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire fa-fw"></i> <span>Data Master</span></a>
             <ul class="dropdown-menu">
                 <li><a class="nav-link" href="?pg=sekolah">Master Sekolah</a></li>
-                <li><a class="nav-link" href="?pg=jurusan">Master Jurusan</a></li>
+                <li><a class="nav-link" href="?pg=jurusan">Master Jalur</a></li>
                 <li><a class="nav-link" href="?pg=jenis">Master Jenis Daftar</a></li>
             </ul>
         </li>
@@ -45,7 +45,7 @@
         <li class="dropdown ">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-book"></i> <span>Cetak</span></a>
             <ul class="dropdown-menu">
-				<li><a class="nav-link" href="?pg=l_ppdbyes">Data Penerimaan PPDB</a></li>
+				<li><a class="nav-link" href="?pg=l_ppdbyes">Data Penerimaan SPMB</a></li>
 				
                
             </ul>
@@ -69,7 +69,7 @@
 
 <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
             <button type="button" class="btn btn-primary btn-lg btn-block btn-icon-split"data-toggle="modal" data-target="#ppdb">
-              <i class="fas fa-web"></i> Aktifkan PPDB
+              <i class="fas fa-web"></i> Aktifkan SPMB
             </button>
           </div>
 </ul>
@@ -78,14 +78,14 @@
         <div class="modal-content">
             <form id="form-ppdb">
                 <div class="modal-header">
-                    <h5 class="modal-title">Silahkan Pilih Tanggal PPDB</h5>
+                    <h5 class="modal-title">Silahkan Pilih Tanggal SPMB</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     
-                    Silahkan Sesuaikan Tanggal Mulai PPDB DISINI
+                    Silahkan Sesuaikan Tanggal Mulai SPMB DISINI
 					<input type="date" name="tgl_pengumuman" class="form-control" value="<?= $setting['tgl_pengumuman'] ?>" >
                     
 

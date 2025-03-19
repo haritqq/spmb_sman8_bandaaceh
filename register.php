@@ -48,7 +48,7 @@ require "config/functions.crud.php";
 											<div class="form-group">
 												<label for="asal">JURUSAN / PEMINATAN</label>
 												<select class="form-control select2" style="width: 100%" name="jurusan" id="jurusan" >
-													<option value="">Pilih Jurusan</option>
+													<option value="">Pilih Jalur Masuk</option>
 													<?php $qu = mysqli_query($koneksi, "select * from jurusan");
 													while ($jur = mysqli_fetch_array($qu)) {
 													?>

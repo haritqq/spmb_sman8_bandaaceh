@@ -222,7 +222,7 @@ crossorigin="anonymous"></script>
         </div>
         <footer class="main-footer">
           <div class="footer-left">
-            Copyright &copy; <?= date('Y') ?> PPDB <div class="bullet"></div> <?= $setting['nama_sekolah'] ?> 
+            Copyright &copy; <?= date('Y') ?> SPMB <div class="bullet"></div> <?= $setting['nama_sekolah'] ?> 
           </div>
           <div class="footer-right">
 			<a href="https://<?= $setting['web'] ?>">V.1.1</a>
