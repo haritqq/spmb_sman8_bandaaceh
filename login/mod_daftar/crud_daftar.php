@@ -144,7 +144,7 @@ if ($pg == 'nilai') {
 if ($pg == 'simpandatadiri') {
     $status = (isset($_POST['status'])) ? 1 : 0;
     $data = [
-        'nis'     => $_POST['nis'],
+        // 'nis'     => $_POST['nis'],
         'asal_sekolah'     => $_POST['asal_sekolah'],
         'npsn_asal'        => $_POST['npsn_asal'],
 		'jurusan'          => $_POST['jurusan'],
@@ -158,11 +158,11 @@ if ($pg == 'simpandatadiri') {
         'no_hp'             => $_POST['nohp'],
         'anak_ke'           => $_POST['anakke'],
         'saudara'           => $_POST['saudara'],
-        'paud'            => $_POST['paud'],
-        'tk'             => $_POST['tk'],
+        // 'paud'            => $_POST['paud'],
+        // 'tk'             => $_POST['tk'],
 		'citacita'            => $_POST['citacita'],
         'hobi'             => $_POST['hobi'],
-        'status_keluarga'   => $_POST['statuskeluarga'],
+        // 'status_keluarga'   => $_POST['statuskeluarga'],
         'agama'              => $_POST['agama'],
         'no_kip'              => $_POST['kip']
 
