@@ -80,5 +80,63 @@
     }
 </script>
 
+<script>
+    // Simulasi data dari database (biasanya ini diperoleh melalui AJAX atau API)
+    const dataFromDatabase = {
+        nama: "Budi Santoso",
+        nisn: "1234567890",
+        tanggal_lahir: "2005-06-15",
+        email: "budi@example.com",
+        jurusan: "IPA"
+    };
+
+    function loadData() {
+        // Isi form dengan data dari database
+        document.getElementById("nama").value = dataFromDatabase.nama;
+        document.getElementById("nisn").value = dataFromDatabase.nisn;
+        document.getElementById("tanggal_lahir").value = dataFromDatabase.tanggal_lahir;
+        document.getElementById("email").value = dataFromDatabase.email;
+        document.getElementById("jurusan").value = dataFromDatabase.jurusan;
+
+        // Setelah data terisi, update progres bar
+        updateProgress();
+    }
+
+    function updateProgress() {
+        const form = document.getElementById('dataDiriForm');
+        const totalFields = form.elements.length - 1; // Exclude submit button
+        let filledFields = 0;
+
+        // Hitung isian yang sudah terisi
+        for (let i = 0; i < totalFields; i++) {
+            const field = form.elements[i];
+            if (field.value.trim() !== "" || (field.type === "select-one" && field.value !== "")) {
+                filledFields++;
+            }
+        }
+
+        // Hitung persentase progres
+        const progress = (filledFields / totalFields) * 100;
+
+        // Update tampilan progres bar
+        const progressBar = document.getElementById('progress-bar-inner');
+        const progressText = document.getElementById('progress-text');
+        progressBar.style.width = progress + '%';
+        progressText.textContent = Math.round(progress) + '%';
+
+        // Warna progres bar
+        if (progress < 50) {
+            progressBar.style.backgroundColor = 'red';
+        } else if (progress < 80) {
+            progressBar.style.backgroundColor = 'orange';
+        } else {
+            progressBar.style.backgroundColor = 'green';
+        }
+    }
+
+    // Panggil loadData() saat halaman selesai dimuat
+    window.onload = loadData;
+</script>
+
 </body>
 </html>
