@@ -26,7 +26,7 @@ if ($pg == 'tambah') {
         $kodedaftar = $data['maxKode'];
         $noUrut = (int) substr($kodedaftar, 8, 3);
         $noUrut++;
-        $char = "PPDB" . date('Y');
+        $char = "SPMB" . date('Y');
         $newID = $char . sprintf("%03s", $noUrut);
     $nama = str_replace("'", "`", $_POST['nama']);
     $sekolah = fetch($koneksi, 'sekolah', ['npsn' => $_POST['asal']]);

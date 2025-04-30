@@ -137,7 +137,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row mb-2">
-                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Pilihan Program/Jurusan</label>
+                                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Pilih Jalur</label>
                                     <div class="col-sm-12 col-md-7">
                                         <select class='form-control' name='jurusan' required oninput="updateProgress1()">
                                             <option value="<?= $siswa['jurusan'] ?>"><?= $siswa['jurusan'] ?></option>

@@ -7,26 +7,28 @@
          <title>SPMB ONLINE | <?= $setting['nama_sekolah'] ?></title>
 		 <!-- META DISKRIPSI-->
 		<meta name="description" content="Mari bergabung Bersama Kami di <?= $setting['nama_sekolah'] ?>, Pendaftaran Peserta didik Baru Tahun <?= date('Y') ?> Kembali dibuka ">
-
+		<meta name="keywords" content="simasapp v.1.1,simas madrasah, simas sekolah, web simas,"/>
 
         <!-- Vendor -->
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
         
-        <link href="https://unbk.kemdikbud.go.id/vendor/chart/Chart.min.css" rel="stylesheet" />
+        <!-- <link href="https://unbk.kemdikbud.go.id/vendor/chart/Chart.min.css" rel="stylesheet" /> -->	
+		<!-- kode url diatas tidak aman, jadi dibuatkan internal dibawah -->
+		<link rel="stylesheet" href="assets/v_beranda/front.min.css">
 		<link rel="stylesheet" href="assets/modules/izitoast/css/iziToast.min.css">
         
         <link href="https://unbk.kemdikbud.go.id/assets/css/front.min.css" rel="stylesheet" />
         <link rel="shortcut icon" href="<?= $setting['logo'] ?>" />
 		
 		 <link rel="stylesheet" href="assets/css/1.css">
-		 <!-- <link rel="stylesheet" href="assets/css/2.css"> -->
-		 <!-- <link rel="stylesheet" href="assets/css/3.css"> -->
+		 <link rel="stylesheet" href="assets/css/2.css">
+		 <link rel="stylesheet" href="assets/css/3.css">
         
-		 <!-- <link rel="stylesheet" href="assets/css/components2.css"> -->
+		 <link rel="stylesheet" href="assets/css/components2.css">
 		
 		
 		
-    <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+      <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
 	<!--WAKTU JALAN-->
 	<link rel="stylesheet" type="text/css" href="assets/front/vendor/animate/animate.css">
@@ -81,8 +83,8 @@
                                 </li>
                                 <!-- <li class="nav-item">
                                     <a class="nav-link" href="#statistik" id="link-statistik">Statistik</a>
-                                </li>
-                                <li class="nav-item">
+                                </li> -->
+                                <!--<li class="nav-item">
                                     <a class="nav-link" href="#persyaratan" id="link-persyaratan">Info Pendaftaran</a>
                                 </li> -->
 								
@@ -121,9 +123,9 @@
                                             <p data-animation="animated slideInRight" data-delay="0.5s">
                                                 Sistem Penerimaan Murid Baru Tahun Pelajaran 2025/2026 <?= $setting['nama_sekolah'] ?>.
                                             </p>
-                                            <p data-animation="animated slideInRight" data-delay="1s">
+                                            <!--<p data-animation="animated slideInRight" data-delay="1s">
                                                 Pendaftaran Siswa dan Siswi Baru Tahun 2025 ini telah dibuka. Silahkan Segera Daftar dan lengkapi Formulir
-                                            </p>
+                                            </p>-->
                                             <p data-animation="animated flipInX" data-delay="1.5s">
                                                 <a href="/#tentang" class="btn btn-warning nav-link">
                                                     Lihat Alur Pendaftaran
@@ -235,7 +237,7 @@
 							<div class="col-sm-6">
 							
                                <p align="center">
-                                    <img src="assets/Alur Pendaftaran PPDB.png" align="center" width="600" style="max-width: 100%" />
+                                    <img src="assets/Alur Pendaftaran SPMB.png" align="center" width="600" style="max-width: 100%" />
                                 </p>
 										
                             </div>
@@ -325,7 +327,7 @@
 								<?php } else { ?>
 								<div class="card">
 									<div class="card-header bg-info">
-										<h4>Formulir Pendaftaran</h4>
+										<h4>Formulir Buat Akun</h4>
 									</div>
 									<form id="form-daftar2">
 										<div class="card-body">

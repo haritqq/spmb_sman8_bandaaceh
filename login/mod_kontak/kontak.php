@@ -4,7 +4,7 @@
             <div class="section-header-back">
               <a href="?pg=setting" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
-            <h1>PPDB Online</h1>
+            <h1>SPMB Online</h1>
             <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href='.'>Dashboard</a></div>
               <div class="breadcrumb-item active"><a href="?pg=setting">Settings</a></div>
@@ -18,7 +18,7 @@
            
 			<h2 class="section-title">Pengaturan Kontak Pendaftaran</h2>
             <p class="section-lead">
-              Silahkan Sesuaikan Pengaturan PPDB Online Disini
+              Silahkan Sesuaikan Pengaturan SPMB Online Disini
             </p>
 			
 			 </td>

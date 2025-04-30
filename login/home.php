@@ -57,9 +57,9 @@
 </div>
 <?php if ($setting['ppdb'] == "0") { ?>
 <div class="section-body" id="form-setting">
-            <h2 class="section-title">PPDB <?= date('Y') ?> Belum Aktif</h2>
+            <h2 class="section-title">SPMB <?= date('Y') ?> Belum Aktif</h2>
             <p class="section-lead">
-             Silahkan Setting di Pengaturan PPDB Untuk Mengaktifkan 
+             Silahkan Setting di Pengaturan SPMB Untuk Mengaktifkan 
 				
 		    </div> 
  <?php } ?>
@@ -77,19 +77,19 @@
     <ul class="nav nav-tabs" id="myTab5" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="home-tab5" data-toggle="tab" href="#home5" role="tab" aria-controls="home" aria-selected="true">
-          <i class="fas fa-home"></i> Profile</a>
+          <i class="fas fa-home"></i> Profil</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="profile-tab5" data-toggle="tab" href="#profile5" role="tab" aria-controls="profile" aria-selected="false">
-          <i class="fas fa-id-card"></i> Alamat Lembaga</a>
+          <i class="fas fa-id-card"></i> Alamat Sekolah</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="contact-tab5" data-toggle="tab" href="#contact5" role="tab" aria-controls="contact" aria-selected="false">
-          <i class="fas fa-mail-bulk"></i> Contact</a>
+          <i class="fas fa-mail-bulk"></i> Kontak</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" id="kepala-tab5" data-toggle="tab" href="#kepala5" role="tab" aria-controls="kepala" aria-selected="false">
-          <i class="fas fa-user"></i> Kepala Madrasah</a>
+          <i class="fas fa-user"></i> Kepala Sekolah</a>
       </li>
     </ul>
     <div class="tab-content" id="myTabContent5">
@@ -98,7 +98,7 @@
             <div class="card" id="settings-card">
                 
                      <div class="form-group row align-items-center">
-                        <label for="site-title" class="form-control-label col-sm-3 text-md-right">NSM</label>
+                        <label for="site-title" class="form-control-label col-sm-3 text-md-right">NSS</label>
                         <div class="col-sm-6 col-md-9">
                             <?= $setting['nsm'] ?>
                         </div>
@@ -205,7 +205,7 @@
             <div class="card" id="settings-card">
                 
                      <div class="form-group row align-items-center">
-                        <label for="site-title" class="form-control-label col-sm-3 text-md-right">Kepala Madrasah</label>
+                        <label for="site-title" class="form-control-label col-sm-3 text-md-right">Kepala Sekolah</label>
                         <div class="col-sm-6 col-md-9">
                             <?= $setting['kepala'] ?>
                         </div>

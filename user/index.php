@@ -14,7 +14,7 @@ if (isset($_SESSION['id_daftar'])) {
   <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>PPDB | <?= $setting['nama_sekolah'] ?></title>
+    <title>SPMB | <?= $setting['nama_sekolah'] ?></title>
 
 	<link rel="shortcut icon" href="../<?= $setting['logo'] ?>" />
 	<!-- General CSS Files -->

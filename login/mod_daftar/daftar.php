@@ -215,12 +215,12 @@
                                     <td>
                                         <a data-toggle="tooltip" data-placement="top" title="" data-original-title="detail siswa" href="?pg=ubahdaftar&id=<?= enkripsi($daftar['id_daftar']) ?>" class="btn btn-sm btn-info"><i class="fas fa-edit    "></i></a>
                                         <!-- Button trigger modal -->
-                                        <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Cetak" href="mod_daftar/print_daftar.php?id=<?= enkripsi($daftar['id_daftar']) ?>" class="btn btn-sm btn-success"><i class="fas fa-print    "></i></a>
+                                        <a data-toggle="tooltip" data-placement="top" title="" data-original-title="cetak" href="mod_daftar/print_daftar.php?id=<?= enkripsi($daftar['id_daftar']) ?>" class="btn btn-sm btn-success"><i class="fas fa-print    "></i></a>
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modal-edit<?= $no ?>">
+                                        <button type="button" class="btn btn-sm btn-primary" data-original-title="edit" data-toggle="modal" data-target="#modal-edit<?= $no ?>">
                                             <i class="fas fa-edit    "></i>
                                         </button>
-                                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modal-nilai<?= $no ?>">
+                                        <button type="button" class="btn btn-sm btn-primary" data-original-title="input nilai" data-toggle="modal" data-target="#modal-nilai<?= $no ?>">
                                             <i class="fas fa-address-book    "></i>
                                         </button>
                                         <button data-id="<?= $daftar['id_daftar'] ?>" class="hapus btn-sm btn btn-danger"><i class="fas fa-trash    "></i></button>
@@ -306,7 +306,7 @@
                                                 <div class="modal-content">
                                                     <form id="form-nilai<?= $no ?>" name="form-nilai">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title">INPUT NILAI RAPOR</h5>
+                                                            <h5 class="modal-title">INPUT NILAI RAPOR SISWA</h5>
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>

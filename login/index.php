@@ -14,7 +14,7 @@ if (isset($_SESSION['id_user'])) {
   <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>PPDB | <?= $setting['nama_sekolah'] ?></title>
+    <title>SPMB | <?= $setting['nama_sekolah'] ?></title>
 
 	<link rel="shortcut icon" href="../<?= $setting['logo'] ?>" />
 	<!-- General CSS Files -->
@@ -199,7 +199,7 @@ crossorigin="anonymous"></script>
 				</ul>
 			</div>
 			<div class="sidebar-brand sidebar-brand-sm">
-              <a href="#">PPDB</a>
+              <a href="#">SPMB</a>
             </div>
 			
            
@@ -217,7 +217,7 @@ crossorigin="anonymous"></script>
         </div>
         <footer class="main-footer">
           <div class="footer-left">
-            Copyright &copy; <?= date('Y') ?> PPDB | <?= $setting['nama_sekolah'] ?> 
+            Copyright &copy; <?= date('Y') ?> SPMB | <?= $setting['nama_sekolah'] ?> 
           </div>
           <div class="footer-right">
 		   Versi 1.3
